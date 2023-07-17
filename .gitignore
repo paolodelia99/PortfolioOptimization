@@ -1,2 +1,6 @@
 data/*
 res/danish_eff_frontier.png
+
+__pycache__/*
+*/__pycache__/*
+Linear and non Linear Opt/__pycache__/*
