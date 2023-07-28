@@ -4,6 +4,9 @@ import scipy.optimize as sco
 def get_portf_rtn(w, avg_rtns):
     return np.sum(avg_rtns * w)
 
+def neg_portf_rtn(w, avg_rtns):
+    return -get_portf_rtn(w, avg_rtns)
+
 def get_portf_vol(w, avg_rtns, cov_mat):
     return np.sqrt(np.dot(w.T, np.dot(cov_mat, w)))
 
@@ -30,9 +33,7 @@ def get_efficient_frontier(avg_rtns, cov_mat, rtns_range):
         constraints = ({'type': 'eq',
                         'fun': lambda x: get_portf_rtn(x, avg_rtns) - ret},
                        {'type': 'eq',
-                        'fun': lambda x: np.sum(x) - 1},
-                       {'type': 'ineq',
-                        'fun': lambda x: x})
+                        'fun': lambda x: np.sum(x) - 1})
         efficient_portfolio = get_optimal_portfolio(f_obj=get_portf_vol,
                                            args=args,
                                            constraints=constraints,
