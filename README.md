@@ -21,4 +21,5 @@ The notebook are based on the current knowledge that I have and thefore I'm goin
 - [ ] EDA notebook
 - [ ] Refactor code in [min_var_danish](Linear and non Linear Opt\min_var_danish.ipynb) (**In progress**)
 - [ ] Add min var portfolio with the transaction cost constraints
+- [ ] Read Risk and Asset Allocation for learning of to model the distribution of returns
 
