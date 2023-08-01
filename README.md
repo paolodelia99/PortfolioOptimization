@@ -9,6 +9,8 @@ Personal repository where I investigate, using math and statistics, which portfo
 The notebook are based on the current knowledge that I have and thefore I'm going to evaluate the following methods:
 
 - Linear and non linear optmization
+    - [Minimum variance portofolio (Danish stocks)](Linear%20and%20non%20Linear%20Opt\min_var_danish.ipynb)
+    - [Maximum sharpe ratio portfolio (Danish stocks)](Linear%20and%20non%20Linear%20Opt\max_sr_danish.ipynb)
 - Stochastich optimizaition
 - Reinforcement learning approach
 
@@ -19,7 +21,8 @@ The notebook are based on the current knowledge that I have and thefore I'm goin
 ## TODOs
 
 - [ ] EDA notebook
-- [ ] Refactor code in [min_var_danish](Linear and non Linear Opt\min_var_danish.ipynb) (**In progress**)
+- [ ] Input preprocessing notebook
+- [x] Refactor code in [min_var_danish](Linear and non Linear Opt\min_var_danish.ipynb) (**In progress**)
 - [ ] Add min var portfolio with the transaction cost constraints
-- [ ] Read Risk and Asset Allocation for learning of to model the distribution of returns
+- [x] Read Risk and Asset Allocation for learning of to model the distribution of returns
 
