@@ -10,6 +10,14 @@ def neg_portf_rtn(w, avg_rtns):
 def get_portf_vol(w, avg_rtns, cov_mat):
     return np.sqrt(np.dot(w.T, np.dot(cov_mat, w)))
 
+def get_utility_value(w, avg_rtns, cov_mat, risk_aversion):
+    portf_rtn = get_portf_rtn(w, avg_rtns)
+    portf_vol = get_portf_vol(w, avg_rtns, cov_mat)
+    return portf_rtn - 0.5 * risk_aversion * portf_vol
+
+def neg_utility_value(w, avg_rtns, cov_mat, risk_aversion):
+    return -get_utility_value(w, avg_rtns, cov_mat, risk_aversion)
+
 def get_optimal_portfolio(f_obj, constraints, args, bounds):
     n_assets = len(args[0])
     initial_guess = n_assets * [1. / n_assets, ]
